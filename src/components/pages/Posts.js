@@ -3,7 +3,6 @@ import * as actions from '../../store/actions'
 import { connect } from 'react-redux'
 import PostsList from '../posts/postsList/PostsList'
 import { Link } from 'react-router-dom'
-import './Posts.css'
 
 class Posts extends Component {
   componentDidMount() {

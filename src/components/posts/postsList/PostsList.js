@@ -13,6 +13,7 @@ const PostsList = ({ posts }) => {
           <div className="postlist-item__links">
             <Link to={'/posts/' + item.id}>Read Post</Link>
             <Link to={'/posts/edit/' + item.id}>Edit Post</Link>
+            <Link to={'/posts/delete/' + item.id}>Delete Post</Link>
           </div>
         </div>
       ))}
