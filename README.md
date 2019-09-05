@@ -9,3 +9,6 @@ This is react app created with CRA. So installation is pretty simple
 - git clone
 - npm install
 - npm start
+
+Also You can check is your code according airbnb code syle standards:
+`npm run lint`
