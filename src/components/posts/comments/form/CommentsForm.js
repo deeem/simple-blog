@@ -1,24 +1,24 @@
-import React, { Component } from 'react'
-import './CommentsForm.css'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import './CommentsForm.css';
+import PropTypes from 'prop-types';
 
 class CommentsForm extends Component {
   state = {
-    comment: '',
-  }
+    comment: ''
+  };
 
   onChange = e => {
-    this.setState({ [e.target.name]: e.target.value })
-  }
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
   onPublish = e => {
-    e.preventDefault()
-    this.setState({ comment: '' })
-    this.props.onSubmit(this.state.comment)
-  }
+    e.preventDefault();
+    this.setState({ comment: '' });
+    this.props.onSubmit(this.state.comment);
+  };
 
   render() {
-    const { text } = this.state
+    const { text } = this.state;
     return (
       <form className="comment-form">
         <textarea
@@ -32,12 +32,12 @@ class CommentsForm extends Component {
           Publish Comment
         </button>
       </form>
-    )
+    );
   }
 }
 
-export default CommentsForm
+export default CommentsForm;
 
 CommentsForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-}
+  onSubmit: PropTypes.func.isRequired
+};

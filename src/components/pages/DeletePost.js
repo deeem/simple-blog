@@ -1,26 +1,26 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import axios from '../../api/axios-posts'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import axios from '../../api/axios-posts';
 
 class DeletePost extends Component {
   onDelete = e => {
-    const { id } = this.props.match.params
-    this.deletePost(id)
-  }
+    const { id } = this.props.match.params;
+    this.deletePost(id);
+  };
 
   onCancel = e => {
-    this.props.history.push(`/`)
-  }
+    this.props.history.push(`/`);
+  };
 
   deletePost = async id => {
-    await axios.delete(`/posts/${id}`)
-    this.props.history.push(`/`)
-  }
+    await axios.delete(`/posts/${id}`);
+    this.props.history.push(`/`);
+  };
 
   render() {
-    const { id } = this.props.match.params
-    const { posts } = this.props
-    const post = posts.find(item => item.id === +id)
+    const { id } = this.props.match.params;
+    const { posts } = this.props;
+    const post = posts.find(item => item.id === +id);
     return (
       <>
         <h5>Are You Shure Want to Delete this Post?</h5>
@@ -35,15 +35,15 @@ class DeletePost extends Component {
           </button>
         </div>
       </>
-    )
+    );
   }
 }
 
 const mapStateToProps = state => {
   return {
     posts: state.posts.posts,
-    loading: state.posts.loading,
-  }
-}
+    loading: state.posts.loading
+  };
+};
 
-export default connect(mapStateToProps)(DeletePost)
+export default connect(mapStateToProps)(DeletePost);

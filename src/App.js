@@ -1,13 +1,13 @@
-import React from 'react'
-import './App.css'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Header from './components/layout/Header'
-import Posts from './components/pages/Posts'
-import Post from './components/pages/Post'
-import EditPost from './components/pages/EditPost'
-import NewPost from './components/pages/NewPost'
-import DeletePost from './components/pages/DeletePost'
-import NotFound from './components/pages/NotFound'
+import React from 'react';
+import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Header from './components/layout/Header';
+import Posts from './components/pages/Posts';
+import Post from './components/pages/Post';
+import EditPost from './components/pages/EditPost';
+import NewPost from './components/pages/NewPost';
+import DeletePost from './components/pages/DeletePost';
+import NotFound from './components/pages/NotFound';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
         </Switch>
       </div>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

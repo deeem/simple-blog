@@ -1,45 +1,45 @@
-import * as actionTypes from '../actions/actionTypes'
+import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
   posts: [],
   loading: false,
-  error: false,
-}
+  error: false
+};
 
-const postsFetchStart = (state, action) => {
+const postsFetchStart = state => {
   return {
     ...state,
-    loading: true,
-  }
-}
+    loading: true
+  };
+};
 
 const postsFetchSuccess = (state, action) => {
   return {
     ...state,
     posts: action.posts,
-    loading: false,
-  }
-}
+    loading: false
+  };
+};
 
 const postsFetchFail = (state, action) => {
   return {
     ...state,
     loading: false,
-    error: action.error,
-  }
-}
+    error: action.error
+  };
+};
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.POSTS_FETCH_START:
-      return postsFetchStart(state, action)
+      return postsFetchStart(state, action);
     case actionTypes.POSTS_FETCH_SUCCESS:
-      return postsFetchSuccess(state, action)
+      return postsFetchSuccess(state, action);
     case actionTypes.POSTS_FETCH_FAIL:
-      return postsFetchFail(state, action)
+      return postsFetchFail(state, action);
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default reducer
+export default reducer;

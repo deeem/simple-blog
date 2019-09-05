@@ -1,21 +1,23 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import './commentsList.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import './commentsList.css';
 
 const CommentsList = ({ comments }) => {
   return (
     <>
       <ul className="comments-list">
         {comments.map(item => (
-          <li key={item.id} className="comments-list__item">{item.body}</li>
+          <li key={item.id} className="comments-list__item">
+            {item.body}
+          </li>
         ))}
       </ul>
     </>
-  )
-}
+  );
+};
 
-export default CommentsList
+export default CommentsList;
 
 CommentsList.propTypes = {
-  comments: PropTypes.array.isRequired,
-}
+  comments: PropTypes.arrayOf(PropTypes.object).isRequired
+};

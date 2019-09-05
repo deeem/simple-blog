@@ -12,13 +12,7 @@
       "max-len": ["error", 80]
     },
     "env": {
-      "browser": true
-    },
-    "settings": {
-      "import/resolver": {
-        "webpack": {
-          "config": "./config/webpack-common-config.js"
-        }
-      }
+      "browser": true,
+      "es6": true
     }
   }

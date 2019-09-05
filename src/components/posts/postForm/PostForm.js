@@ -1,30 +1,30 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import './PostForm.css'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import './PostForm.css';
 
 class PostForm extends Component {
   state = {
     title: '',
-    body: '',
-  }
+    body: ''
+  };
 
   componentDidMount() {
-    const { title, body } = this.props
-    this.setState({ title, body })
+    const { title, body } = this.props;
+    this.setState({ title, body });
   }
 
   onChange = e => {
-    this.setState({ [e.target.name]: e.target.value })
-  }
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
   onSubmit = e => {
-    e.preventDefault()
-    const {title, body} = this.state
-    this.props.onSubmit({title, body})
-  }
+    e.preventDefault();
+    const { title, body } = this.state;
+    this.props.onSubmit({ title, body });
+  };
 
   render() {
-    const { title, body } = this.state
+    const { title, body } = this.state;
     return (
       <>
         <div className="post-form">
@@ -51,23 +51,25 @@ class PostForm extends Component {
             />
           </div>
           <div className="form-control">
-            <button className="post-form__submit" onClick={this.onSubmit}>Publish</button>
+            <button className="post-form__submit" onClick={this.onSubmit}>
+              Publish
+            </button>
           </div>
         </div>
       </>
-    )
+    );
   }
 }
 
-export default PostForm
+export default PostForm;
 
 PostForm.defaultProps = {
-    title: '',
-    body: '',
-}
+  title: '',
+  body: ''
+};
 
 PostForm.propTypes = {
   title: PropTypes.string,
   body: PropTypes.string,
-  onSubmit: PropTypes.func.isRequired,
-}
+  onSubmit: PropTypes.func.isRequired
+};

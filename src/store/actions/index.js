@@ -1,3 +1,1 @@
-export {
-   postsFetch
-} from './posts'
+export { postsFetch } from './posts';
