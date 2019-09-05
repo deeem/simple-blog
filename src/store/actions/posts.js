@@ -28,7 +28,6 @@ export const postsFetch = () => {
     axios
       .get('/posts')
       .then(res => {
-        console.log(res.data)
         dispatch(postsFetchSuccess(res.data))
       })
       .catch(res => {
