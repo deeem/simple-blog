@@ -21,7 +21,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src -c .eslintrc.json --ext js,jsx",
-    "check-staged": "lint-staged"
+    "check-staged": "lint-staged",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,6 +49,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
+    "gh-pages": "^2.1.1",
     "husky": "^4.0.0-beta.1",
     "lint-staged": "^9.2.5",
     "prettier": "^1.18.2"
@@ -63,5 +66,6 @@
     "*.{js,jsx,json,md}": [
       "prettier --list-different"
     ]
-  }
+  },
+  "homepage": "https://deeem.github.io/simple-blog/"
 }
