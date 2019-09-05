@@ -12,7 +12,11 @@ class Posts extends Component {
     return (
       <>
         <h2> Latest Blog Posts</h2>
-        <PostsList posts={this.props.posts} />
+        {this.props.loading ? (
+          <p>loading..</p>
+        ) : (
+          <PostsList posts={this.props.posts} />
+        )}
       </>
     )
   }

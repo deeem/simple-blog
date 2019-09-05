@@ -1,0 +1,33 @@
+.post-form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.form-control input,
+.form-control textarea {
+    padding: .7rem;
+}
+
+.post-form__submit {
+    min-width: 400px;
+    margin: 1rem auto;
+    background-color: teal;
+    border: none;
+    padding: 1rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .post-form__submit:hover,
+  .post-form__submit:active {
+    background-color: rgb(15, 134, 134);
+  }

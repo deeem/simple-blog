@@ -12,6 +12,7 @@ const PostsList = ({ posts }) => {
           <p className="postlist-item__body">{item.body}</p>
           <div className="postlist-item__links">
             <Link to={'/posts/' + item.id}>Read Post</Link>
+            <Link to={'/posts/edit/' + item.id}>Edit Post</Link>
           </div>
         </div>
       ))}
