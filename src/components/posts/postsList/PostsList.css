@@ -3,6 +3,7 @@
   border-radius: 10px;
   margin: 2rem;
   max-width: 50rem;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 150px;
   grid-template-rows: 1fr 1fr;

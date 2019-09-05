@@ -2,6 +2,7 @@
     list-style-type: none;
     background-color: #e8e6e8;
     padding: 3rem;
+    width: 100%;
 }
 
 .comments-list__item {

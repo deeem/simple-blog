@@ -1,0 +1,17 @@
+nav {
+  background-color: rgb(15, 134, 134);
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.nav-branding:link,
+.nav-branding:visited {
+  text-decoration: none;
+}
+
+.nav-branding {
+    color: white;
+    font-size: 1.5rem;
+}

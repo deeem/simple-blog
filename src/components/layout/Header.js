@@ -1,9 +1,12 @@
 import React from 'react'
+import './Header.css'
 
 const Header = () => {
-    return (
-        <h1>header</h1>
-    )
+  return (
+    <nav>
+      <a href="/" className="nav-branding">Simple Blog</a>
+    </nav>
+  )
 }
 
 export default Header

@@ -11,7 +11,7 @@ class Posts extends Component {
   render() {
     return (
       <>
-        <h1> Latest Blog Posts</h1>
+        <h2> Latest Blog Posts</h2>
         <PostsList posts={this.props.posts} />
       </>
     )
