@@ -13,6 +13,7 @@ class CommentsForm extends Component {
 
   onPublish = e => {
     e.preventDefault()
+    this.setState({ comment: '' })
     this.props.onSubmit(this.state.comment)
   }
 

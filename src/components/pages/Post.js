@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from '../../api/axios-posts'
 import CommentsForm from '../posts/comments/form/CommentsForm'
+import CommentsList from '../posts/comments/commentsList/commentsList'
 
 class Post extends Component {
   state = {
@@ -44,7 +45,6 @@ class Post extends Component {
   }
 
   onCommentSubmit = text => {
-    console.log(text)
     this.publishComment(text)
   }
 
@@ -61,6 +61,7 @@ class Post extends Component {
         )}
         <hr />
         <h3>Comments</h3>
+        {comments && <CommentsList comments={comments} />}
         <h5>Leave Your Comment</h5>
         <CommentsForm onSubmit={this.onCommentSubmit} />
 

@@ -1,0 +1,11 @@
+.comments-list {
+    list-style-type: none;
+    background-color: #e8e6e8;
+    padding: 3rem;
+}
+
+.comments-list__item {
+    background-color: #bbd4e0;
+    margin: 1rem;
+    padding: 1rem;
+}
