@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import * as actions from '../../store/actions'
 import { connect } from 'react-redux'
 import PostsList from '../posts/postsList/PostsList'
+import { Link } from 'react-router-dom'
+import './Posts.css'
 
 class Posts extends Component {
   componentDidMount() {
@@ -12,6 +14,7 @@ class Posts extends Component {
     return (
       <>
         <h2> Latest Blog Posts</h2>
+        <Link to="/posts/new" className="btn">Add New</Link>
         {this.props.loading ? (
           <p>loading..</p>
         ) : (
