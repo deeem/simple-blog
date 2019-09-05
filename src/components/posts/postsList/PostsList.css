@@ -23,4 +23,39 @@
 .postlist-item__links {
   grid-area: links;
   border-left: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.postlist-item__links a,
+.postlist-item__links a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.postlist-item__link-item {
+  margin: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.postlist-item__view-icon {
+  background-image: url(../../../assets/iconfinder_view-show_3671905.svg);
+  height: 1rem;
+  width: 1rem;
+  background-repeat: no-repeat;
+}
+
+.postlist-item__edit-icon {
+  background-image: url(../../../assets/iconfinder_write_126582.svg);
+  height: 1rem;
+  width: 1rem;
+  background-repeat: no-repeat;
+}
+.postlist-item__delete-icon {
+  background-image: url(../../../assets/iconfinder_close_309090.svg);
+  height: 1rem;
+  width: 1rem;
+  background-repeat: no-repeat;
 }

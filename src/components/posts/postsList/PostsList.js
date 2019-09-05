@@ -11,9 +11,18 @@ const PostsList = ({ posts }) => {
           <h4 className="postlist-item__title">{item.title}</h4>
           <p className="postlist-item__body">{item.body}</p>
           <div className="postlist-item__links">
-            <Link to={'/posts/' + item.id}>Read Post</Link>
-            <Link to={'/posts/edit/' + item.id}>Edit Post</Link>
-            <Link to={'/posts/delete/' + item.id}>Delete Post</Link>
+            <div className="postlist-item__link-item">
+              <div className="postlist-item__view-icon"></div>
+              <Link to={'/posts/' + item.id}>Read Post</Link>
+            </div>
+            <div className="postlist-item__link-item">
+              <div className="postlist-item__edit-icon"></div>
+              <Link to={'/posts/edit/' + item.id}>Edit Post</Link>
+            </div>
+            <div className="postlist-item__link-item">
+              <div className="postlist-item__delete-icon"></div>
+              <Link to={'/posts/delete/' + item.id}>Delete Post</Link>
+            </div>
           </div>
         </div>
       ))}
