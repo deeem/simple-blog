@@ -1,0 +1,25 @@
+.postlist-item {
+  border: 1px solid;
+  border-radius: 10px;
+  margin: 2rem;
+  max-width: 50rem;
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 'title links' 'body links';
+}
+
+.postlist-item__title {
+  grid-area: title;
+  border-bottom: 1px solid black;
+  padding-bottom: 2rem;
+}
+
+.postlist-item__body {
+  grid-area: body;
+}
+
+.postlist-item__links {
+  grid-area: links;
+  border-left: 1px solid black;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import * as actions from '../../store/actions'
 import { connect } from 'react-redux'
+import PostsList from '../posts/postsList/PostsList'
 
 class Posts extends Component {
   componentDidMount() {
@@ -8,7 +9,12 @@ class Posts extends Component {
   }
 
   render() {
-    return <h1> Posts page </h1>
+    return (
+      <>
+        <h1> Latest Blog Posts</h1>
+        <PostsList posts={this.props.posts} />
+      </>
+    )
   }
 }
 

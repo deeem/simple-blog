@@ -17,6 +17,7 @@ const postsFetchSuccess = (state, action) => {
   return {
     ...state,
     posts: action.posts,
+    loading: false,
   }
 }
 
